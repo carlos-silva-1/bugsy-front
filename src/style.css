@@ -1,0 +1,79 @@
+.Resolved {
+	background-color: #282828;
+}
+
+.Unresolved {
+	background-color: #fafffc;
+}
+
+.issue-card-title {
+	font-size: 22;
+	font-weight: bold;
+	height: 50px;
+}
+
+.Low {
+	background-color: #95bae4;
+}
+
+.Medium {
+	background-color: #c9e2ad;
+}
+
+.High {
+	background-color: #ffb57b;
+}
+
+.Urgent {
+	background-color: #ff6e6e;
+}
+
+.black-link {
+	color: #000;
+}
+
+.relative {
+	position: relative;
+}
+
+.hover-btn {
+	position: absolute;
+	z-index: 2;
+}
+
+.edit-btn-position {
+	right: 35px;
+	top: 40px;
+}
+
+.delete-btn-position {
+	right:100px; 
+	top: 40px;
+}
+
+.edit-btn-position-details-screen {
+	right: 10px;
+	top: 6px;
+}
+
+.delete-btn-position-details-screen {
+	right:75px; 
+	top: 6px;
+}
+
+.issue-card-select:hover {
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+	border-width: 2px;
+}
+
+.close-button {
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    height: 1rem;
+    width: 1rem;
+    position: relative;
+    text-align: top;
+    color: #f96155;
+    margin-left: 5px;
+}
