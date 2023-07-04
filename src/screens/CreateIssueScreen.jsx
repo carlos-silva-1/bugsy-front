@@ -17,12 +17,14 @@ const CreateIssueScreen = () => {
 
   const [createIssue, { isLoading }] = useCreateIssueMutation();
 
+  const backendURL = 'http://bugsy.eba-rjbpkehi.us-east-2.elasticbeanstalk.com/';
+
   useEffect(() => {
     loadAllUserProfiles();
   }, []);
 
   const loadAllUserProfiles = () => {
-    axios.get("/api/users/")
+    axios.get(`${backendURL}api/users/`)
     .then((res) => {
       setUsers(res.data.users)
     })

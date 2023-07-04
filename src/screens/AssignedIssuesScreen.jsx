@@ -23,6 +23,8 @@ const AssignedIssuesScreen = () => {
 
   const [deleteIssue, { isLoading }] = useDeleteIssueMutation();
 
+  const backendURL = 'http://bugsy.eba-rjbpkehi.us-east-2.elasticbeanstalk.com/';
+
 	useEffect(() => {
     loadAllIssues();
   }, []);
@@ -49,7 +51,7 @@ const AssignedIssuesScreen = () => {
   }, [showResolved, showUnresolved]);
 
   const loadAllIssues = async () => {
-    await axios.get("/api/issues/")
+    await axios.get(`${backendURL}api/issues/`)
     .then((res) => {
      setIssues(res.data);
     })

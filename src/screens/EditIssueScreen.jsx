@@ -29,6 +29,8 @@ const EditIssueScreen = () => {
 
   const [updateIssue, { isLoading }] = useUpdateIssueMutation();
 
+  const backendURL = 'http://bugsy.eba-rjbpkehi.us-east-2.elasticbeanstalk.com/';
+
   useEffect(() => {
     setTitle(issueInfo.title)
     setCategory(issueInfo.category)
@@ -41,7 +43,7 @@ const EditIssueScreen = () => {
   }, []);
 
   const loadAllUserProfiles = () => {
-    axios.get("/api/users/")
+    axios.get(`${backendURL}api/users/`)
     .then((res) => {
       setUsers(res.data.users)
     })

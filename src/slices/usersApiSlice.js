@@ -1,24 +1,26 @@
 import { apiSlice } from './apiSlice';
-const USERS_URL = '/api/users';
+const USERS_URL = 'api/users';
+
+const backendURL = 'http://bugsy.eba-rjbpkehi.us-east-2.elasticbeanstalk.com/';
 
 export const userApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     login: builder.mutation({
       query: (data) => ({
-        url: `${USERS_URL}/auth`,
+        url: `${backendURL}${USERS_URL}/auth`,
         method: 'POST',
         body: data,
       }),
     }),
     logout: builder.mutation({
       query: () => ({
-        url: `${USERS_URL}/logout`,
+        url: `${backendURL}${USERS_URL}/logout`,
         method: 'POST',
       }),
     }),
     register: builder.mutation({
       query: (data) => ({
-        url: `${USERS_URL}`,
+        url: `${backendURL}${USERS_URL}`,
         method: 'POST',
         body: data,
         // header: new Header('Access-Control-Allow-Origin', '*'),
@@ -26,7 +28,7 @@ export const userApiSlice = apiSlice.injectEndpoints({
     }),
     updateUser: builder.mutation({
       query: (data) => ({
-        url: `${USERS_URL}/profile`,
+        url: `${backendURL}${USERS_URL}/profile`,
         method: 'PUT',
         body: data,
       }),

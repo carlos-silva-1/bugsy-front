@@ -19,6 +19,8 @@ const LoginScreen = () => {
 
   const { userInfo } = useSelector((state) => state.auth);
 
+  const backendURL = 'http://bugsy.eba-rjbpkehi.us-east-2.elasticbeanstalk.com/';
+
   useEffect(() => {
     if (userInfo) {
       navigate('/');
