@@ -8,7 +8,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api': {
-        target: 'https://bugsy-backend-7bwr0rmbu-carlos-silva-1.vercel.app/',
+        target: 'https://bugsy.onrender.com/',
         changeOrigin: true,
       },
     },

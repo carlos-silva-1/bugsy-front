@@ -29,7 +29,7 @@ const EditIssueScreen = () => {
 
   const [updateIssue, { isLoading }] = useUpdateIssueMutation();
 
-  const backendURL = 'http://bugsy.eba-rjbpkehi.us-east-2.elasticbeanstalk.com/';
+  const backendURL = 'https://bugsy.onrender.com/';
 
   useEffect(() => {
     setTitle(issueInfo.title)

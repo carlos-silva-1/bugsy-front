@@ -21,7 +21,7 @@ const IssuesScreen = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const backendURL = 'http://bugsy.eba-rjbpkehi.us-east-2.elasticbeanstalk.com/';
+  const backendURL = 'https://bugsy.onrender.com/';
 
   const [deleteIssue, { isLoading }] = useDeleteIssueMutation();
 

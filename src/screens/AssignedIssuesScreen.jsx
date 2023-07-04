@@ -23,7 +23,7 @@ const AssignedIssuesScreen = () => {
 
   const [deleteIssue, { isLoading }] = useDeleteIssueMutation();
 
-  const backendURL = 'http://bugsy.eba-rjbpkehi.us-east-2.elasticbeanstalk.com/';
+  const backendURL = 'https://bugsy.onrender.com/';
 
 	useEffect(() => {
     loadAllIssues();

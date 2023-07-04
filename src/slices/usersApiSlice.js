@@ -1,7 +1,7 @@
 import { apiSlice } from './apiSlice';
 const USERS_URL = 'api/users';
 
-const backendURL = 'http://bugsy.eba-rjbpkehi.us-east-2.elasticbeanstalk.com/';
+const backendURL = 'https://bugsy.onrender.com/';
 
 export const userApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({

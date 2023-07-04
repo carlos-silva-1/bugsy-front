@@ -17,7 +17,7 @@ const CreateIssueScreen = () => {
 
   const [createIssue, { isLoading }] = useCreateIssueMutation();
 
-  const backendURL = 'http://bugsy.eba-rjbpkehi.us-east-2.elasticbeanstalk.com/';
+  const backendURL = 'https://bugsy.onrender.com/';
 
   useEffect(() => {
     loadAllUserProfiles();
