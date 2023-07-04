@@ -46,7 +46,7 @@ const IssuesScreen = () => {
   }, [showResolved, showUnresolved]);
 
   const loadAllIssues = async () => {
-    await axios.get(`${backendURL}api/issues/`)
+    await axios.get(`${backendURL}api/issues/`, {withCredentials: true})
     .then((res) => {
      setIssues(res.data);
      setIssuesCopy(res.data);
