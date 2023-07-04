@@ -8,7 +8,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api': {
-        target: 'http://bugsy.eba-rjbpkehi.us-east-2.elasticbeanstalk.com/',
+        target: 'https://bugsy-backend-7bwr0rmbu-carlos-silva-1.vercel.app/',
         changeOrigin: true,
       },
     },
