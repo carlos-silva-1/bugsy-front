@@ -49,7 +49,7 @@ const AssignedIssuesScreen = () => {
   }, [showResolved, showUnresolved]);
 
   const loadAllIssues = async () => {
-    await axios.get(`${process.env.SERVER_URL}/api/issues/`)
+    await axios.get(`${process.env.SERVER_URL}api/issues/`)
     .then((res) => {
      setIssues(res.data);
     })
