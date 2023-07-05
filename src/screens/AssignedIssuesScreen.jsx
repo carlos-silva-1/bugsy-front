@@ -7,6 +7,7 @@ import { useDeleteIssueMutation } from '../slices/issueApiSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { setCurrentIssue } from '../slices/issueSlice';
 import { useNavigate } from 'react-router-dom';
+import backendURL from '../constants.js';
 
 const AssignedIssuesScreen = () => {
   const [issues, setIssues] = useState([]);
@@ -23,7 +24,7 @@ const AssignedIssuesScreen = () => {
 
   const [deleteIssue, { isLoading }] = useDeleteIssueMutation();
 
-  const backendURL = 'https://bugsy.onrender.com/';
+  // const backendURL = 'https://bugsy.onrender.com/';
 
 	useEffect(() => {
     loadAllIssues();
