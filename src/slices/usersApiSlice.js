@@ -1,7 +1,8 @@
 import { apiSlice } from './apiSlice';
-import SERVER_URL from '../constants'
+//import SERVER_URL from '../constants'
 
 const USERS_URL = 'api/users';
+const SERVER_URL = 'https://bugsy.onrender.com/';
 
 export const userApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
