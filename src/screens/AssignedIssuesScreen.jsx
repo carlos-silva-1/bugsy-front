@@ -24,8 +24,6 @@ const AssignedIssuesScreen = () => {
 
   const [deleteIssue, { isLoading }] = useDeleteIssueMutation();
 
-  // const backendURL = 'https://bugsy.onrender.com/';
-
 	useEffect(() => {
     loadAllIssues();
   }, []);
