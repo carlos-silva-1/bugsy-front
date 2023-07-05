@@ -16,6 +16,7 @@ const IssueCard = ({ issueProps }) => {
   const [deleteIssue, { isLoading }] = useDeleteIssueMutation();
 
   const clickHandler = () => {
+    console.log(issueProps);
     dispatch(setCurrentIssue(issueProps));
   }
 
