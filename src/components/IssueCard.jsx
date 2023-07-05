@@ -18,6 +18,7 @@ const IssueCard = ({ issueProps }) => {
   const clickHandler = () => {
     console.log(issueProps);
     dispatch(setCurrentIssue(issueProps));
+    navigate("/issue-details");
   }
 
   return (
@@ -25,7 +26,7 @@ const IssueCard = ({ issueProps }) => {
       <Card.Body className={issueProps.priority}>
 
         <Card.Header className={`issue-card-title`}>
-          <Card.Link className="black-link" href="/issue-details" onClick={() => {clickHandler()}}>Title: {issueProps.title}</Card.Link>
+          <Card.Link className="black-link" onClick={() => {clickHandler()}}>Title: {issueProps.title}</Card.Link>
         </Card.Header>
 
         <ListGroup>
