@@ -8,7 +8,7 @@ import { useUpdateIssueMutation } from '../slices/issueApiSlice';
 import { setCurrentIssue } from '../slices/issueSlice';
 import { useNavigate } from 'react-router-dom';
 import axios from 'redaxios';
-import SERVER_URL from '../constants.js'
+import SERVER_URL from '../constants'
 
 const EditIssueScreen = () => {
   const [title, setTitle] = useState('');

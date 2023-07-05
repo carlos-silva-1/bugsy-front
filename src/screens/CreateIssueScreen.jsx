@@ -5,7 +5,7 @@ import Loader from '../components/Loader';
 import axios from 'redaxios';
 import { useCreateIssueMutation } from '../slices/issueApiSlice';
 import { toast } from 'react-toastify';
-import SERVER_URL from '../constants.js'
+import SERVER_URL from '../constants'
 
 const CreateIssueScreen = () => {
 	const [title, setTitle] = useState('');

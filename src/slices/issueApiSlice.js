@@ -1,5 +1,5 @@
 import { apiSlice } from './apiSlice';
-import SERVER_URL from '../constants.js'
+import SERVER_URL from '../constants'
 
 const ISSUES_URL = 'api/issues';
 
