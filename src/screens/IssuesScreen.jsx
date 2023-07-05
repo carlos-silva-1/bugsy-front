@@ -21,8 +21,6 @@ const IssuesScreen = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const backendURL = 'https://bugsy.onrender.com/';
-
   const [deleteIssue, { isLoading }] = useDeleteIssueMutation();
 
 	useEffect(() => {
@@ -46,7 +44,7 @@ const IssuesScreen = () => {
   }, [showResolved, showUnresolved]);
 
   const loadAllIssues = async () => {
-    await axios.get(`${backendURL}api/issues/`, {withCredentials: true})
+    await axios.get(`${process.env.SERVER_URL}api/issues/`, {withCredentials: true})
     .then((res) => {
      setIssues(res.data);
      setIssuesCopy(res.data);

@@ -29,8 +29,6 @@ const EditIssueScreen = () => {
 
   const [updateIssue, { isLoading }] = useUpdateIssueMutation();
 
-  const backendURL = 'https://bugsy.onrender.com/';
-
   useEffect(() => {
     setTitle(issueInfo.title)
     setCategory(issueInfo.category)
@@ -43,7 +41,7 @@ const EditIssueScreen = () => {
   }, []);
 
   const loadAllUserProfiles = () => {
-    axios.get(`${backendURL}api/users/`)
+    axios.get(`${process.env.SERVER_URL}api/users/`)
     .then((res) => {
       setUsers(res.data.users)
     })

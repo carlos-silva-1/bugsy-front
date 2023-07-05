@@ -17,14 +17,12 @@ const CreateIssueScreen = () => {
 
   const [createIssue, { isLoading }] = useCreateIssueMutation();
 
-  const backendURL = 'https://bugsy.onrender.com/';
-
   useEffect(() => {
     loadAllUserProfiles();
   }, []);
 
   const loadAllUserProfiles = () => {
-    axios.get(`${backendURL}api/users/`)
+    axios.get(`${process.env.SERVER_URL}api/users/`)
     .then((res) => {
       setUsers(res.data.users)
     })

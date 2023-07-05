@@ -19,8 +19,6 @@ const LoginScreen = () => {
 
   const { userInfo } = useSelector((state) => state.auth);
 
-  const backendURL = 'https://bugsy.onrender.com/';
-
   useEffect(() => {
     if (userInfo) {
       navigate('/');

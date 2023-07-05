@@ -8,7 +8,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api': {
-        target: 'https://bugsy.onrender.com/',
+        target: process.env.SERVER_URL,
         changeOrigin: true,
       },
     },
