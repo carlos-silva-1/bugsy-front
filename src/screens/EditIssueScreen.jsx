@@ -8,6 +8,7 @@ import { useUpdateIssueMutation } from '../slices/issueApiSlice';
 import { setCurrentIssue } from '../slices/issueSlice';
 import { useNavigate } from 'react-router-dom';
 import axios from 'redaxios';
+import SERVER_URL from '../constants.js'
 
 const EditIssueScreen = () => {
   const [title, setTitle] = useState('');
@@ -41,7 +42,7 @@ const EditIssueScreen = () => {
   }, []);
 
   const loadAllUserProfiles = () => {
-    axios.get(`${process.env.SERVER_URL}api/users/`)
+    axios.get(`${SERVER_URL}api/users/`)
     .then((res) => {
       setUsers(res.data.users)
     })

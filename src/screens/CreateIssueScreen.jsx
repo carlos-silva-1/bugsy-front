@@ -5,6 +5,7 @@ import Loader from '../components/Loader';
 import axios from 'redaxios';
 import { useCreateIssueMutation } from '../slices/issueApiSlice';
 import { toast } from 'react-toastify';
+import SERVER_URL from '../constants.js'
 
 const CreateIssueScreen = () => {
 	const [title, setTitle] = useState('');
@@ -22,7 +23,7 @@ const CreateIssueScreen = () => {
   }, []);
 
   const loadAllUserProfiles = () => {
-    axios.get(`${process.env.SERVER_URL}api/users/`)
+    axios.get(`${SERVER_URL}api/users/`)
     .then((res) => {
       setUsers(res.data.users)
     })

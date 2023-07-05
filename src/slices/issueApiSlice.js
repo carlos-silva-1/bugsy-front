@@ -1,24 +1,26 @@
 import { apiSlice } from './apiSlice';
+import SERVER_URL from '../constants.js'
+
 const ISSUES_URL = 'api/issues';
 
 export const issueApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     deleteIssue: builder.mutation({
       query: (id) => ({
-        url: `${process.env.SERVER_URL}${ISSUES_URL}/${id}`,
+        url: `${SERVER_URL}${ISSUES_URL}/${id}`,
         method: 'DELETE',
       }),
     }),
     createIssue: builder.mutation({
       query: (data) => ({
-        url: `${process.env.SERVER_URL}${ISSUES_URL}/`,
+        url: `${SERVER_URL}${ISSUES_URL}/`,
         method: 'POST',
         body: data,
       }),
     }),
     updateIssue: builder.mutation({
       query: (data) => ({
-        url: `${process.env.SERVER_URL}${ISSUES_URL}/${data._id}`,
+        url: `${SERVER_URL}${ISSUES_URL}/${data._id}`,
         method: 'PUT',
         body: data,
       }),

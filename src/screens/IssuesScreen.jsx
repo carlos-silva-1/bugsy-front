@@ -7,6 +7,7 @@ import { useDeleteIssueMutation } from '../slices/issueApiSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { setCurrentIssue } from '../slices/issueSlice';
 import { useNavigate } from 'react-router-dom';
+import SERVER_URL from '../constants.js'
 
 const IssuesScreen = () => {
 	const [issues, setIssues] = useState([]);
@@ -44,7 +45,7 @@ const IssuesScreen = () => {
   }, [showResolved, showUnresolved]);
 
   const loadAllIssues = async () => {
-    await axios.get(`${process.env.SERVER_URL}api/issues/`, {withCredentials: true})
+    await axios.get(`${SERVER_URL}api/issues/`, {withCredentials: true})
     .then((res) => {
      setIssues(res.data);
      setIssuesCopy(res.data);

@@ -1,0 +1,1 @@
+export default const SERVER_URL = 'https://bugsy.onrender.com/';

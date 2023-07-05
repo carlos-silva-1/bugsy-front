@@ -1,31 +1,33 @@
 import { apiSlice } from './apiSlice';
+import SERVER_URL from '../constants.js'
+
 const USERS_URL = 'api/users';
 
 export const userApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     login: builder.mutation({
       query: (data) => ({
-        url: `${process.env.SERVER_URL}${USERS_URL}/auth`,
+        url: `${SERVER_URL}${USERS_URL}/auth`,
         method: 'POST',
         body: data,
       }),
     }),
     logout: builder.mutation({
       query: () => ({
-        url: `${process.env.SERVER_URL}${USERS_URL}/logout`,
+        url: `${SERVER_URL}${USERS_URL}/logout`,
         method: 'POST',
       }),
     }),
     register: builder.mutation({
       query: (data) => ({
-        url: `${process.env.SERVER_URL}${USERS_URL}`,
+        url: `${SERVER_URL}${USERS_URL}`,
         method: 'POST',
         body: data,
       }),
     }),
     updateUser: builder.mutation({
       query: (data) => ({
-        url: `${process.env.SERVER_URL}${USERS_URL}/profile`,
+        url: `${SERVER_URL}${USERS_URL}/profile`,
         method: 'PUT',
         body: data,
       }),
