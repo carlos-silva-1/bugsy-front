@@ -42,7 +42,7 @@ const ProfileScreen = () => {
       try {
         setIsAdmin(isAdminTEMP);
         const res = await updateProfile({
-          // _id: userInfo._id,
+          _id: userInfo._id,
           name,
           email,
           password,
