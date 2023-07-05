@@ -8,7 +8,6 @@ import { useUpdateIssueMutation } from '../slices/issueApiSlice';
 import { setCurrentIssue } from '../slices/issueSlice';
 import { useNavigate } from 'react-router-dom';
 import axios from 'redaxios';
-//import SERVER_URL from '../constants'
 
 const SERVER_URL = 'https://bugsy.onrender.com/';
 

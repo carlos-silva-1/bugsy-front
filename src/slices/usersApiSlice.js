@@ -1,5 +1,4 @@
 import { apiSlice } from './apiSlice';
-//import SERVER_URL from '../constants'
 
 const USERS_URL = 'api/users';
 const SERVER_URL = 'https://bugsy.onrender.com/';
