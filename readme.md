@@ -14,6 +14,10 @@ Deployed with Render:
 
 https://bugsyclient.onrender.com
 
+## Backend link
+
+https://github.com/carlos-silva-1/Bugsy-Server
+
 ---
 
 ## Built With
