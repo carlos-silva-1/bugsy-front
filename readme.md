@@ -27,8 +27,6 @@ https://github.com/carlos-silva-1/Bugsy-Server
 - React
 - Node
 - Redux
-- React Bootstrap
-- React Toastify
 - JWT
 
 ---
