@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setCurrentIssue } from '../slices/issueSlice';
 import { useNavigate } from 'react-router-dom';
 
-const SERVER_URL = 'https://bugsy.onrender.com/';
+const SERVER_URL = 'https://bugsy-server.onrender.com/';
 
 const IssuesScreen = () => {
 	const [issues, setIssues] = useState([]);
