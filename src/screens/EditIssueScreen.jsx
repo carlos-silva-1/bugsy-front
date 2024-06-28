@@ -9,7 +9,7 @@ import { setCurrentIssue } from '../slices/issueSlice';
 import { useNavigate } from 'react-router-dom';
 import axios from 'redaxios';
 
-const SERVER_URL = 'https://bugsy.onrender.com/';
+const SERVER_URL = 'https://bugsy-server.onrender.com/';
 
 const EditIssueScreen = () => {
   const [title, setTitle] = useState('');
