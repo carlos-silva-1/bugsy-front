@@ -6,7 +6,7 @@ import axios from 'redaxios';
 import { useCreateIssueMutation } from '../slices/issueApiSlice';
 import { toast } from 'react-toastify';
 
-const SERVER_URL = 'https://bugsy.onrender.com/';
+const SERVER_URL = 'https://bugsy-server.onrender.com/';
 
 const CreateIssueScreen = () => {
 	const [title, setTitle] = useState('');
